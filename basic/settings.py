@@ -119,3 +119,11 @@ LOGGING = {
         },
     }
 }
+
+RAVEN_CONFIG = {
+    'dsn': 'gevent+https://a3077eabdc0a4fa5a3d02b242c8b9087:f379bd46074c4dac8656e253bc5bf734@sentry.linovia.com//19',
+}
+
+INSTALLED_APPS = INSTALLED_APPS + (
+    'raven.contrib.django.raven_compat',
+)
