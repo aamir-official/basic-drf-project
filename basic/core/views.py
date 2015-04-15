@@ -34,7 +34,9 @@ class MyUser(ModelViewSet):
         serializer.is_valid(raise_exception=True)
         self.perform_create(serializer)
         headers = self.get_success_headers(serializer.data)
-        raise NotImplementedError()
+        # raise NotImplementedError('exception')
+        from rest_framework.exceptions import NotAcceptable
+        raise NotAcceptable("I'm sorry dave, I'm afraid you can't do that")
         from rest_framework.response import Response
         return Response(serializer.data, status=201, headers=headers)
 

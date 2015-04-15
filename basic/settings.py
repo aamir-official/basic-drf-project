@@ -120,3 +120,7 @@ LOGGING = {
         },
     }
 }
+
+REST_FRAMEWORK = {
+    'EXCEPTION_HANDLER': 'basic.custom_exception_handler'
+}
